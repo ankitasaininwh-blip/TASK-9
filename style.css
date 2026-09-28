@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: white;
+    color: #222;
+}
+
+
+/* HEADER */
+
+header {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #159bd7;
+}
+
+.login-btn {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 6px;
+    background: #159bd7;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: calc(100vh - 75px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 10%;
+    overflow: hidden;
+}
+
+
+/* LEFT SIDE */
+
+.hero-content {
+    width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 span {
+    color: #159bd7;
+}
+
+.hero-content p {
+    max-width: 500px;
+    color: #777;
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+
+/* BOOK A SERVICE BUTTON */
+
+.service-btn {
+    background: #159bd7;
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+
+/* BUTTON CURSOR PAR MOVE HOGA */
+
+.service-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(21, 155, 215, 0.3);
+}
+
+
+/* IMAGE */
+
+.hero-image {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 450px;
+    max-width: 100%;
+    border-radius: 10px;
+
+    /* Animation sirf ek baar chalegi */
+    animation: imageAnimation 3s ease-in-out 1;
+}
+
+
+/* IMAGE ANIMATION */
+
+@keyframes imageAnimation {
+
+    0% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+
+    25% {
+        transform: translate(20px, -15px)
+                   rotate(4deg)
+                   scale(1.04);
+    }
+
+    50% {
+        transform: translate(30px, 10px)
+                   rotate(7deg)
+                   scale(0.94);
+    }
+
+    75% {
+        transform: translate(-15px, 15px)
+                   rotate(-5deg)
+                   scale(1.04);
+    }
+
+    100% {
+        transform: translate(0, 0)
+                   rotate(0deg)
+                   scale(1);
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 0 5%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 5%;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-content p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-image {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .hero-image img {
+        width: 350px;
+    }
+}
